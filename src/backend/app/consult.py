@@ -78,12 +78,13 @@ MAX_SESSIONS = 300
 
 def serialize_session(s: Session) -> dict:
     f = s.facts
+    last_bot = next((h["content"][:250] for h in reversed(s.history) if h.get("role") == "assistant"), "")
     return {
         "id": s.id,
         "created": s.created,
         "facts": {
-            "text": f.text,
-            "symptom_text": f.symptom_text,
+            "text": f.text[:1200],
+            "symptom_text": f.symptom_text[:800],
             "duration_days": f.duration_days,
             "trend": f.trend,
             "severity": f.severity,
@@ -95,9 +96,9 @@ def serialize_session(s: Session) -> dict:
             "allergies_asked": f.allergies_asked,
             "slots": f.slots,
         },
-        "texts": s.texts,
-        "symptom_texts": s.symptom_texts,
-        "history": s.history[-30:],
+        "texts": [t[:200] for t in s.texts[-10:]],
+        "symptom_texts": [t[:200] for t in s.symptom_texts[-10:]],
+        "history": [{"role": "assistant", "content": last_bot}] if last_bot else [],
         "asked": s.asked,
         "done_slots": sorted(s.done_slots),
         "retried_severity": s.retried_severity,

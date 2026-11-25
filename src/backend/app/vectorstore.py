@@ -14,6 +14,7 @@ _STOP = {
     "what", "when", "where", "which", "with", "that", "this", "from", "have", "does",
     "should", "about", "there", "their", "they", "would", "could", "usual", "for",
     "and", "the", "are", "how", "can", "take", "into", "some", "most", "more", "than",
+    "symptom", "symptoms", "sign", "signs", "flag", "flags", "urgent",
 }
 
 

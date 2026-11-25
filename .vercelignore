@@ -1,0 +1,14 @@
+.venv
+node_modules
+src/frontend/node_modules
+data
+logs
+models
+tests
+docs
+config/.env
+config/tls
+*.log
+__pycache__
+.pytest_cache
+

@@ -1,0 +1,16 @@
+# local environment, secrets and runtime data
+.venv/
+node_modules/
+config/.env
+data/
+logs/
+*.log
+# build output and caches
+src/frontend/dist/
+__pycache__/
+.pytest_cache/
+# large model files are downloaded, not committed
+models/
+
+
+

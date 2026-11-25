@@ -1,0 +1,20 @@
+# Backend core dependencies (lightweight, Vercel-compatible)
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.9
+pydantic-settings>=2.5
+httpx>=0.27
+ddgs>=9
+trafilatura>=2.0
+
+# Tests
+pytest>=8.0
+
+# Optional local-only tools (if building full ChromaDB/dialogue indexes or running local STT/TTS offline):
+# chromadb>=1.0
+# fastembed>=0.4
+# huggingface_hub>=0.25
+# pyarrow>=16
+# faster-whisper>=1.1
+# piper-tts>=1.2

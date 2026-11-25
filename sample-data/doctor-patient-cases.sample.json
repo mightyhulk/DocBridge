@@ -1,0 +1,11 @@
+{
+  "_note": "Hand-written SYNTHETIC examples in the same shape as the indexed doctor-patient cases (id, patient text, doctor reply). The real index (data/chroma_dialogues) is built from public Hugging Face datasets by src/backend/scripts/build_dialogue_index.py; its rows are not redistributed here.",
+  "cases": [
+    {"id": "sample-1", "patient": "I have had a sore throat and mild fever for two days. It hurts to swallow.",
+     "doctor": "This looks like a viral throat infection. Rest, warm fluids and paracetamol for the fever. See a doctor if it lasts more than 5 days or you cannot swallow."},
+    {"id": "sample-2", "patient": "My child has a cough at night and a blocked nose, no fever.",
+     "doctor": "Common cold is likely. Saline drops, steam and fluids help. Seek review if breathing becomes fast or the cough lasts beyond 2 weeks."},
+    {"id": "sample-3", "patient": "Stomach pain on the right lower side that is getting worse, with nausea.",
+     "doctor": "Pain that moves to the right lower abdomen with nausea can be appendicitis. Please go to an emergency department today."}
+  ]
+}
